@@ -3,8 +3,8 @@ import { CssBaseline, ThemeProvider } from "@mui/material"
 import { ColorModeContext, useMode } from "./theme"
 import Navbar from "./components/Navbar/Navbar"
 // import Table from "./components/Table/Table"
-// import About from "./components/About/About"
-// import LoginPage from "./components/Login/Login2"
+import About from "./components/About/About"
+import LoginPage from "./components/Login/Login2"
 import { Header } from "./components/Header/Header"
 
 export const App = () => {
@@ -16,11 +16,12 @@ export const App = () => {
         <CssBaseline />
         <div className="app">
           {/* <Navbar /> */}
+          <Header />
           <main>
             <Routes>
               <Route path="/" element={<Header />} />
-              {/* <Route path="/login" element={<LoginPage />} />
-              <Route path="/about" element={<About />} /> */}
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </main>
         </div>
