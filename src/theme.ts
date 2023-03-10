@@ -146,18 +146,28 @@ export const themeSettings = (mode: string) => {
         : {
             // palette values for light mode
             primary: {
-              main: colors.grey[500],
+              dark: "#37966F",
+              main: "#356859",
+              light: "#B9E4C9",
             },
             secondary: {
-              main: colors.greenAccent[500],
+              main: "#FD5523",
             },
-            neutral: {
-              dark: colors.grey[700],
-              main: colors.grey[500],
-              light: colors.grey[100],
+            warning: {
+              light: "#ff9800",
+              main: "#ed6c02",
+              dark: "#e65100",
             },
+            light: "#B9E4C9",
+
             background: {
-              default: "#fcfcfc",
+              paper: "#FFFBE6",
+              default: "#FFFBE6",
+            },
+            text: {
+              primary: "#e65100",
+              secondary: "#FFFBE6",
+              light: "#B9E4C9",
             },
           }),
     },
@@ -189,6 +199,9 @@ export const themeSettings = (mode: string) => {
         fontSize: 14,
       },
     },
+    a: {
+      fontSize: "12rem",
+    },
   }
 }
 type ColorMode = {
@@ -215,5 +228,6 @@ export const useMode = (): UseModeReturnType => {
     () => createTheme(themeSettings(mode) as ThemeOptions),
     [mode]
   )
+
   return [theme, colorMode]
 }

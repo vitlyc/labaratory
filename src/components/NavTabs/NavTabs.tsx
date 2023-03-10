@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
+import { Box, Button, Typography, Slider } from "@mui/material"
 
 type PathToValueMap = { [key: string]: number }
 
@@ -20,17 +21,33 @@ const NavTabs = () => {
   }, [pathname, value])
 
   return (
-    <Tabs
-      value={value}
-      onChange={onChangeTab}
-      aria-label=""
-      indicatorColor="secondary"
-      component="nav"
-    >
-      <Tab label="Home" component={Link} to="/" />
-      <Tab label="About" component={Link} to="/about" />
-      <Tab label="Login" component={Link} to="/login" />
-    </Tabs>
+    <Box>
+      <Tabs
+        value={value}
+        onChange={onChangeTab}
+        indicatorColor="secondary"
+        textColor="secondary"
+      >
+        <Tab
+          label="Home"
+          component={Link}
+          to="/"
+          sx={{ fontSize: "20px", color: "#FFFBE6" }}
+        />
+        <Tab
+          label="About"
+          component={Link}
+          to="/about"
+          sx={{ fontSize: "20px", color: "#FFFBE6" }}
+        />
+        <Tab
+          label="Login"
+          component={Link}
+          to="/login"
+          sx={{ fontSize: "20px", color: "#FFFBE6" }}
+        />
+      </Tabs>
+    </Box>
   )
 }
 

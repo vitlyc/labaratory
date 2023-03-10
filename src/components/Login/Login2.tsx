@@ -7,9 +7,12 @@ import {
   Button,
   AppBar,
   Toolbar,
+  IconButton,
 } from "@mui/material"
 import Form from "../Form/Form"
 import { tokens } from "../../theme"
+import AccessTimeIcon from "@mui/icons-material/AccessTime"
+import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined"
 
 const LoginPage = (): JSX.Element => {
   const theme = useTheme()
@@ -24,10 +27,17 @@ const LoginPage = (): JSX.Element => {
         textAlign="center"
         sx={{ padding: "0 0 20px" }}
       >
-        Login
+        SIGN IN
+      </Typography>
+      <Form />
+      <Button variant="contained" color="error">
+        Error
+      </Button>
+      <Typography variant="subtitle1" color="success.main">
+        Привет
       </Typography>
 
-      <Form />
+      <AccessTimeOutlinedIcon sx={{ fontSize: "160px" }} color="secondary" />
     </Box>
   )
 }

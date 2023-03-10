@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 :root {
   --footer-height: 60px;
   --navbar-height: 4rem;
@@ -22,3 +21,10 @@ body {
   
 }
 
+.tab {
+  font-size: 24px;
+  
+}
+.MuiButton-root{
+  color:aqua;
+}
