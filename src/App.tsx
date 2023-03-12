@@ -6,6 +6,7 @@ import Table from "./components/Table/Table"
 import About from "./components/About/About"
 import LoginPage from "./components/Login/Login2"
 import { Header } from "./components/Header/Header"
+import Login from "./pages/Login"
 
 export const App = () => {
   const [theme, colorMode] = useMode()
@@ -19,7 +20,8 @@ export const App = () => {
           <Header />
           <Routes>
             <Route path="/" element={<Table />} />
-            <Route path="/login" element={<LoginPage />} />
+            {/* <Route path="/loginpage" element={<LoginPage />} /> */}
+            <Route path="/login" element={<Login />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </div>

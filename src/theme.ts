@@ -153,13 +153,7 @@ export const themeSettings = (mode: string) => {
             secondary: {
               main: "#FD5523",
             },
-            warning: {
-              light: "#ff9800",
-              main: "#ed6c02",
-              dark: "#e65100",
-            },
             light: "#B9E4C9",
-
             background: {
               paper: "#FFFBE6",
               default: "#FFFBE6",

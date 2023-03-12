@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
-import { Box, Button, Typography, Slider } from "@mui/material"
+import { Box, Button, Typography, Slider, Grid } from "@mui/material"
 
 type PathToValueMap = { [key: string]: number }
 
@@ -13,6 +13,13 @@ const NavTabs = () => {
   const onChangeTab = (e: React.SyntheticEvent, value: number) => {
     setValue(value)
   }
+
+  const styleTab = {
+    fontSize: "18px",
+    fontWeight: "400",
+    color: "#FFFBE6",
+    // color: (theme:any) => theme.palette.primary.light,
+  } as const
 
   useEffect(() => {
     const pathToValueMap: PathToValueMap = { "/": 0, "/about": 1, "/login": 2 }
@@ -27,25 +34,11 @@ const NavTabs = () => {
         onChange={onChangeTab}
         indicatorColor="secondary"
         textColor="secondary"
+        color="black"
       >
-        <Tab
-          label="Home"
-          component={Link}
-          to="/"
-          sx={{ fontSize: "20px", color: "#FFFBE6" }}
-        />
-        <Tab
-          label="About"
-          component={Link}
-          to="/about"
-          sx={{ fontSize: "20px", color: "#FFFBE6" }}
-        />
-        <Tab
-          label="Login"
-          component={Link}
-          to="/login"
-          sx={{ fontSize: "20px", color: "#FFFBE6" }}
-        />
+        <Tab label="Home" component={Link} to="/" sx={styleTab} />
+        <Tab label="About" component={Link} to="/about" sx={styleTab} />
+        <Tab label="Login" component={Link} to="/login" sx={styleTab} />
       </Tabs>
     </Box>
   )
