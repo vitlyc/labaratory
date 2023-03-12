@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 import { Box, Grid } from "@mui/material"
 
-import AuthCard from "./AuthCard"
 import AuthFooter from "./AuthFooter"
 
 import AuthBackground from "./AuthBackground"
@@ -14,11 +13,12 @@ type AuthWrapperProps = {
 
 const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => (
   <Box sx={{ minHeight: "100vh" }}>
+    AuthWrapper
     <AuthBackground />
     <Grid
       container
       direction="column"
-      justifyContent="flex-end"
+      justifyContent="flex-start"
       sx={{
         minHeight: "100vh",
       }}
@@ -30,17 +30,14 @@ const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => (
           container
           justifyContent="center"
           alignItems="center"
-          sx={{ minHeight: { xs: "calc(100vh - 134px)", md: "calc(100vh - 112px)" } }}
+          sx={{ minHeight: { xs: "calc(100vh - 234px)", md: "calc(100vh - 112px)" } }}
         >
-          {/* <Grid item>
-            <AuthCard>{children}</AuthCard>
-          </Grid> */}
           <Grid item>{children}</Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
+      {/* <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
         <AuthFooter />
-      </Grid>
+      </Grid> */}
     </Grid>
   </Box>
 )

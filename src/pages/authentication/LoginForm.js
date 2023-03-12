@@ -23,7 +23,7 @@ import { Formik } from "formik"
 import VisibilityIcon from "@mui/icons-material/Visibility"
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 
-const AuthLogin = () => {
+const LoginForm = () => {
   const [checked, setChecked] = React.useState(false)
 
   const [showPassword, setShowPassword] = React.useState(false)
@@ -74,7 +74,9 @@ const AuthLogin = () => {
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Stack spacing={1}>
-                  <InputLabel htmlFor="email-login">Email Address</InputLabel>
+                  <InputLabel htmlFor="email-login" sx={{ color: "#FD5523" }}>
+                    Email Address
+                  </InputLabel>
                   <OutlinedInput
                     id="email-login"
                     type="email"
@@ -95,7 +97,9 @@ const AuthLogin = () => {
               </Grid>
               <Grid item xs={12}>
                 <Stack spacing={1}>
-                  <InputLabel htmlFor="password-login">Password</InputLabel>
+                  <InputLabel htmlFor="password-login" sx={{ color: "#FD5523" }}>
+                    Password
+                  </InputLabel>
                   <OutlinedInput
                     fullWidth
                     error={Boolean(touched.password && errors.password)}
@@ -134,18 +138,16 @@ const AuthLogin = () => {
                 </Grid>
               )}
               <Grid item xs={12}>
-                <Button>
-                  <Button
-                    disableElevation
-                    disabled={isSubmitting}
-                    fullWidth
-                    size="large"
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                  >
-                    Login
-                  </Button>
+                <Button
+                  disableElevation
+                  disabled={isSubmitting}
+                  fullWidth
+                  size="large"
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                >
+                  Login
                 </Button>
               </Grid>
             </Grid>
@@ -156,4 +158,4 @@ const AuthLogin = () => {
   )
 }
 
-export default AuthLogin
+export default LoginForm

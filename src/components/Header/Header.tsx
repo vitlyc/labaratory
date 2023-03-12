@@ -6,7 +6,12 @@ import NavTabs from "../NavTabs/NavTabs"
 export const Header = (): JSX.Element => {
   return (
     <>
-      <AppBar position="sticky" enableColorOnDark>
+      <AppBar
+        elevation={10}
+        position="sticky"
+        enableColorOnDark
+        sx={{ height: "var( --navbar-height)" }}
+      >
         <Toolbar>
           <NavTabs />
         </Toolbar>
