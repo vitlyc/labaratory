@@ -12,9 +12,8 @@ type AuthWrapperProps = {
   children: React.ReactNode
 }
 
-const AuthWrapper: React.FC<AuthWrapperProps> = (children) => (
+const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => (
   <Box sx={{ minHeight: "100vh" }}>
-    AuthWrapper
     <AuthBackground />
     <Grid
       container
@@ -33,9 +32,10 @@ const AuthWrapper: React.FC<AuthWrapperProps> = (children) => (
           alignItems="center"
           sx={{ minHeight: { xs: "calc(100vh - 134px)", md: "calc(100vh - 112px)" } }}
         >
-          <Grid item>
+          {/* <Grid item>
             <AuthCard>{children}</AuthCard>
-          </Grid>
+          </Grid> */}
+          <Grid item>{children}</Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
