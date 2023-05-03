@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom"
-
-import { Grid, Stack, Typography, Card, Box, Divider } from "@mui/material"
+import { Grid, Stack, Typography, Card, Box, Divider, Button } from "@mui/material"
 
 import LoginForm from "./authentication/LoginForm"
 import AuthWrapper from "./authentication/AuthWrapper"
 import { JsxEmit } from "typescript"
+import AuthBackground from "./authentication/AuthBackground"
 
 const Login: React.FC = () => (
   <Grid
@@ -23,14 +22,16 @@ const Login: React.FC = () => (
         [theme.breakpoints.up("md")]: {
           maxWidth: "55%",
         },
+        background: "transparent",
       })}
     >
-      <Typography sx={{ padding: "10px 0 25px 0" }} variant="h3">
+      <Typography color={"primary"} sx={{ padding: "10px 0 25px 0" }} variant="h3">
         Login
       </Typography>
 
       <LoginForm />
     </Card>
+    <AuthBackground />
   </Grid>
 )
 
