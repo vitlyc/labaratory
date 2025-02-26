@@ -21,20 +21,6 @@ const NavTabs = () => {
     // color: (theme:any) => theme.palette.primary.light,
   } as const
 
-  const anotherStyle = {
-    visibility: "visible",
-    my: 2,
-    p: 1,
-    bgcolor: (theme: any) => (theme.palette.mode === "dark" ? "#101010" : "grey.100"),
-    color: (theme: any) => (theme.palette.mode === "dark" ? "grey.300" : "grey.800"),
-    border: "1px solid",
-    borderColor: (theme: any) =>
-      theme.palette.mode === "dark" ? "grey.800" : "grey.300",
-    borderRadius: 2,
-    fontSize: "0.875rem",
-    fontWeight: "700",
-  }
-
   useEffect(() => {
     const pathToValueMap: PathToValueMap = { "/": 0, "/about": 1, "/login": 2 }
 
@@ -48,6 +34,7 @@ const NavTabs = () => {
         onChange={onChangeTab}
         indicatorColor="secondary"
         textColor="secondary"
+        color="black"
       >
         <Tab label="Home" component={Link} to="/" sx={styleTab} />
         <Tab label="About" component={Link} to="/about" sx={styleTab} />

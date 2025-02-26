@@ -22,7 +22,6 @@ import { Formik } from "formik"
 
 import VisibilityIcon from "@mui/icons-material/Visibility"
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
-import { themeSettings } from "../../theme"
 
 const LoginForm = () => {
   const [checked, setChecked] = React.useState(false)
@@ -75,12 +74,7 @@ const LoginForm = () => {
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Stack spacing={1}>
-                  <InputLabel
-                    htmlFor="email-login"
-                    sx={(theme) => ({
-                      color: theme.palette.primary.main,
-                    })}
-                  >
+                  <InputLabel htmlFor="email-login" sx={{ color: "#FD5523" }}>
                     Email Address
                   </InputLabel>
                   <OutlinedInput
@@ -103,12 +97,7 @@ const LoginForm = () => {
               </Grid>
               <Grid item xs={12}>
                 <Stack spacing={1}>
-                  <InputLabel
-                    htmlFor="password-login"
-                    sx={(theme) => ({
-                      color: theme.palette.primary.main,
-                    })}
-                  >
+                  <InputLabel htmlFor="password-login" sx={{ color: "#FD5523" }}>
                     Password
                   </InputLabel>
                   <OutlinedInput
@@ -150,6 +139,7 @@ const LoginForm = () => {
               )}
               <Grid item xs={12}>
                 <Button
+                  disableElevation
                   disabled={isSubmitting}
                   fullWidth
                   size="large"
