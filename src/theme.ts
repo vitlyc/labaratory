@@ -70,7 +70,7 @@ export const tokens = (mode: string) => ({
           600: "#858585",
           700: "#a3a3a3",
           800: "#c2c2c2",
-          900: "#e0e0e0",
+          900: "#e0e1e0",
         },
         primary: {
           100: "#040509",
@@ -119,7 +119,6 @@ export const tokens = (mode: string) => ({
       }),
 })
 
-// mui theme settings
 export const themeSettings = (mode: string) => {
   const colors = tokens(mode)
   return {
@@ -159,7 +158,7 @@ export const themeSettings = (mode: string) => {
               default: "#FFFBE6",
             },
             text: {
-              primary: "#e65100",
+              primary: "#356859",
               secondary: "#FFFBE6",
               light: "#B9E4C9",
             },
@@ -167,7 +166,7 @@ export const themeSettings = (mode: string) => {
     },
     typography: {
       fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
-      fontSize: 12,
+      fontSize: 14,
       h1: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 40,
@@ -224,4 +223,92 @@ export const useMode = (): UseModeReturnType => {
   )
 
   return [theme, colorMode]
+}
+
+const secTheme = {
+  primary: {
+    lightest: "#F5F7FF",
+    light: "#EBEEFE",
+    main: "#6366F1",
+    dark: "#4338CA",
+    darkest: "#312E81",
+  },
+  secondary: {
+    lightest: "#F8F9FA",
+    light: "#F3F4F6",
+    main: "#6C737F",
+    dark: "#384250",
+    darkest: "#111927",
+  },
+  error: {
+    lightest: "#FEF3F2",
+    light: "#FEE4E2",
+    main: "#F04438",
+    dark: "#B42318",
+    darkest: "#7A271A",
+  },
+  warning: {
+    lightest: "#FFFAEB",
+    light: "#FEF0C7",
+    main: "#F79009",
+    dark: "#B54708",
+    darkest: "#7A2E0E",
+  },
+  info: {
+    lightest: "#ECFDFF",
+    light: "#CFF9FE",
+    main: "#06AED4",
+    dark: "#0E7090",
+    darkest: "#164C63",
+  },
+  success: {
+    lightest: "#F0FDF9",
+    light: "#CCFBEF",
+    main: "#15B79E",
+    dark: "#107569",
+    darkest: "#134E48",
+  },
+  purple: {
+    lightest: "#F9F5FF",
+    light: "#F4EBFF",
+    main: "#9E77ED",
+    dark: "#6941C6",
+    darkest: "#42307D",
+  },
+  indigo: {
+    lightest: "#F5F7FF",
+    light: "#EBEEFE",
+    main: "#6366F1",
+    dark: "#4338CA",
+    darkest: "#312E81",
+  },
+  green: {
+    lightest: "#F6FEF9",
+    light: "#EDFCF2",
+    main: "#16B364",
+    dark: "#087443",
+    darkest: "#084C2E",
+  },
+  blue: {
+    lightest: "#F5F8FF",
+    light: "#EBEFFF",
+    main: "#2970FF",
+    dark: "#004EEB",
+    darkest: "#00359E",
+  },
+}
+
+const componentsTheme = {
+  dark: {
+    mainBackground: "#1c2536",
+    compBackground: "#111927",
+    textPrimary: "#edf2f7",
+    textSecondary: "#a0aec0",
+  },
+  light: {
+    mainBackground: "#f3f4f6",
+    compBackground: "#ffffff",
+    textPrimary: "#111927",
+    textSecondary: "#6c737f",
+  },
 }
